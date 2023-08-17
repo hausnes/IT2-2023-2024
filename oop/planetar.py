@@ -7,7 +7,7 @@ class Planet:
 mars = Planet("Mars", 227.9, 3389.5)
 jupiter = Planet("Jupiter", 778.5, 69911)
 
-mordi = Planet("Uranus", 150, 10000000000000)
+uranus = Planet("Uranus", 150, 10000000000)
 
 jupiter.radius = 20000 # Endre radiusen til Jupiter
 print(jupiter.radius)
