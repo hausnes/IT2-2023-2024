@@ -1,4 +1,3 @@
-'''
 try:
     poengsumElev = int(input("Skriv inn poengsum: "))
     
@@ -42,3 +41,4 @@ else:
     karakter = 1
 
 print(f"Karakteren til eleven er {karakter}.")
+'''
