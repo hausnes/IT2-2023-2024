@@ -64,7 +64,9 @@ print("\nListe med bokstavar:", listeBokstaver)
 listeBokstaver.sort()
 print("Sortert liste med bokstavar:", listeBokstaver)
 
-
+liste1 = [1,2,[3,[4,5]]]
+liste2 = liste1.copy()
+print("Liste 2, kopiert:", liste2)
 
 '''
     --------------------
