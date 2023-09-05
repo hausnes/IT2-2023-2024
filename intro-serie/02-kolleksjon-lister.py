@@ -80,30 +80,7 @@ print(koordinater)
 koordinater = koordinater + (4,)
 print(koordinater)
 
-'''
-    --------------------
-     Ordbok (dictionary)
-    --------------------
-'''
-print("\nOrdbok:")
-person = {"navn": "Jo Bjørnar Hausnes", "alder": 41}
-print("All informasjon:", person)
-print("Utvalt informasjon:",person["navn"])
-# Legg til eit element i ordboka
-person["adresse"] = "Hausnesvegen 25"
-print("All oppdatert informasjon:", person)
 
-# Liste med ordbok
-print("\nListe med ordbok:")
-personer = [
-    {"navn": "Jo Bjørnar Hausnes", "alder": 41},
-    {"navn": "Kari Nordmann", "alder": 42}
-]
-
-print("\nLøkke som går gjennom all informasjon:", personer)
-# Løkke som går gjennom alle personane i lista
-for person in personer:
-    print("Fornavn:", person["navn"])
 
 
 # Sett
