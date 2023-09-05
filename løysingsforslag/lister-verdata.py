@@ -12,7 +12,7 @@ print("-------------------")
 
 # Liten utvidelse av oppgåve 2.2 a)
 
-for dag in listeVerOgVind: # Tungvint måte med abs. ref. til tal, midlertidig, blei surr med indre løkke og ønska formatering av utskrift (med "titlar")
+for dag in listeVerOgVind: # Tungvint måte med abs. ref. til tal
     print("Dag:",dag[0])
     print("Regnmengde (mm):",dag[1])
     print("vindstyrke (m/s):",dag[2])
