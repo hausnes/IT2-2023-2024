@@ -6,4 +6,4 @@ land = [
 for x in land:
     country = x["Land"]
     innbyggere = x["Innbyggere"]
-    print(f"Land: {country} har {x['Innbyggere']} innbyggere")
+    print(f"Landet {country} har {x['Innbyggere']} innbyggere")

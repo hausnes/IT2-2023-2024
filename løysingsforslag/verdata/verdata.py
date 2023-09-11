@@ -1,6 +1,4 @@
-import datetime as dt
-
-vaerdata = {
+verdata = {
     "lat":59.97,"lon":10.78,"timezone":"Europe/Oslo","timezone_offset":7200,"daily": [
     {
         "dt":1649329200,
@@ -153,9 +151,3 @@ vaerdata = {
     }
 ]
 }
-
-for dag in vaerdata["daily"]:
-    unixtid = dag["dt"]
-    dato = dt.datetime.fromtimestamp(unixtid)
-    temperatur = dag["temp"]["day"] - 273.15
-    print(f"Varsel for {dato}. Temperatur: {temperatur:5.2f} grader celsius.")
