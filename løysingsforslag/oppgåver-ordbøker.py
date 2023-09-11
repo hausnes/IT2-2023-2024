@@ -38,24 +38,24 @@ Oppgåve 2
 # Opprett en ordbok over norske byer
 norske_byer = {
     "Oslo": {
-        "innbyggere": 693494, # Antall innbyggere per 1. januar 2021
-        "fylke": "Oslo", # Fylke som byen tilhører
-        "landemerker": ["Holmenkollen", "Vigelandsparken", "Operaen"] # Noen kjente landemerker i byen
+        "innbyggere": 697899, 
+        "fylke": "Oslo", 
+        "landemerker": ["Holmenkollen", "Vigelandsparken", "Operaen"] 
     },
     "Bergen": {
-        "innbyggere": 283929, # Antall innbyggere per 1. januar 2021
-        "fylke": "Vestland", # Fylke som byen tilhører
-        "landemerker": ["Bryggen", "Fløyen", "Fisketorget"] # Noen kjente landemerker i byen
+        "innbyggere": 298969, 
+        "fylke": "Vestland", 
+        "landemerker": ["Bryggen", "Fløyen", "Fisketorget"] 
     },
     "Trondheim": {
-        "innbyggere": 205163, # Antall innbyggere per 1. januar 2021
-        "fylke": "Trøndelag", # Fylke som byen tilhører
-        "landemerker": ["Nidarosdomen", "Tyholttårnet", "Gamle Bybro"] # Noen kjente landemerker i byen
+        "innbyggere": 209462, 
+        "fylke": "Trøndelag", 
+        "landemerker": ["Nidarosdomen", "Tyholttårnet", "Gamle Bybro"] 
     },
     "Stavanger": {
-        "innbyggere": 142186, # Antall innbyggere per 1. januar 2021
-        "fylke": "Rogaland", # Fylke som byen tilhører
-        "landemerker": ["Preikestolen", "Oljemuseet", "Domkirken"] # Noen kjente landemerker i byen
+        "innbyggere": 148289, 
+        "fylke": "Rogaland", 
+        "landemerker": ["Preikestolen", "Oljemuseet", "Domkirken"] 
     }
 }
 
