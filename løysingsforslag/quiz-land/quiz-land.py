@@ -1,5 +1,11 @@
 # Create an empty dictionary to store the data
-data = {}
+data = {
+    "Norway" : {
+        "capital" : "Oslo",
+        "population" : 5378857,
+        "neighbors" : ["Sweden", "Finland", "Russia"]
+    }
+}
 
 # Define a function to add a country and its information to the data dictionary
 def add_country(name, capital, population, neighbors):
@@ -29,7 +35,7 @@ def add_country(name, capital, population, neighbors):
     data[name] = country
 
 # Examples: Add countries and their information to the data dictionary
-add_country("Norway", "Oslo", 5378857, ["Sweden", "Finland", "Russia"])
+# add_country("Norway", "Oslo", 5378857, ["Sweden", "Finland", "Russia"]) # Already added at the start of the program
 add_country("India", "New Delhi", 1366417754, ["Pakistan", "China", "Nepal", "Bhutan", "Bangladesh", "Myanmar"])
 add_country("Canada", "Ottawa", 39090369, ["United States"])
 add_country("Australia", "Canberra", 25834167, ["Indonesia", "Papua New Guinea", "New Zealand"])
@@ -101,7 +107,7 @@ def ask_question():
         # If the conversion fails, do nothing
         pass
     # Compare the user input with the correct answer
-    if user_answer == answer or user_answer in answer:
+    if user_answer == answer: # To-do: check  'or user_answer in answer'
         # Print a positive feedback
         print("Correct!")
     else:
