@@ -1,6 +1,5 @@
 import verdata
 import datetime as dt
-from tkinter import *
 import matplotlib.pyplot as plt
 
 ver = verdata.verdata
@@ -16,6 +15,11 @@ for dag in ver["daily"]:
     print(f"Varsel for {dato}. Temperatur: {temperatur:5.2f} grader celsius.")
     x.append(dato)
     y.append(temperatur)
+
+    ver = dag["weather"]
+    for v in ver:
+        beskrivelse = v["description"]
+        print("Beskrivelse: " + beskrivelse)
 
 plt.plot(x,y)
 plt.title("Temperaturvarsel")
