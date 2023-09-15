@@ -164,3 +164,21 @@ for lag in eliteserielag:
 
 # Skriv ut navnet på det siste laget som vant serien
 print(f"Laget som vant serien sist var {siste_lag_serie} i {max_aar_serie}.")
+
+# Eksempel 
+personer = {
+    "jb.hausnes@gmail.com": {
+        "fornavn": "Jo Bjørnar", 
+        "etternavn": "Hausnes", 
+        "hobby": ["Telemark", "Nerding", "Chips"] 
+    },
+    "ugga@bugga.com" : {
+        "fornavn": "Ugga", 
+        "etternavn": "Bugga", 
+        "hobby": ["Ugging", "Bugging", "Uggingbugging"]
+    }
+}
+
+# Iterer gjennom alle personene i personer og skriv ut fornavn og etternavn
+for epost, info in personer.items():
+    print(f"{info['fornavn']} {info['etternavn']} med epost {epost} har følgende hobbyer: {', '.join(info['hobby'])}")
