@@ -1,4 +1,6 @@
-# Gjett tallet! Programmet under er et program som lagrer et hemmelig tall mellom 1-100 i en variabel og spør brukeren om å gjette tallet. Det som mangler i programmet er betingelsen(e) for å gi beskjed om tallet som ble gjettet var for høyt eller for lavt. Hvis brukeren gjetter feil skal han/hun få beskjed om å prøve på nytt. Skriv den manglende koden slik at programmet fungerer.
+# Gjett tallet! Programmet under er et program som lagrer et hemmelig tall mellom 1-100 i en variabel og spør brukeren om å gjette tallet. 
+# Det som mangler i programmet er betingelsen(e) for å gi beskjed om tallet som ble gjettet var for høyt eller for lavt. 
+# Hvis brukeren gjetter feil skal han/hun få beskjed om å prøve på nytt. Skriv den manglende koden slik at programmet fungerer.
 
 import random
 
