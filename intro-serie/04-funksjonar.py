@@ -3,13 +3,14 @@ import random
 navn = input('Kva heiter du? ')
 
 # Definerer ein funksjon som genererer tilfeldige høglege helsingar
-def tilfeldigHelsing():
+def tilfeldigHelsing(navn):
     # Definerer ei liste med helsingar
     helsingar = ['Hei', 'Hallo', 'God dag', 'God kveld', 'God natt', 'Heisann', 'Hei på deg', 'Hallaisen', 'Hallois', 'Heisann hoppsann']
     # Returnerer ei tilfeldig helsing frå lista
-    return random.choice(helsingar)
+    return random.choice(helsingar) + ", " + navn
 
-print(f'{tilfeldigHelsing()} {navn}!')
+# print(f'{tilfeldigHelsing()} {navn}!')
+print(tilfeldigHelsing(navn))
 
 # Definerer ein funksjon som tek inn to parametere: navn og språk
 def hels(navn, spraak):
@@ -86,3 +87,59 @@ for movie in movie_runtimes:
     runtime = minutes_to_hours_and_minutes(runtime)
     # Print the movie and its runtime
     print(f"{movie} has a runtime of {runtime}")
+
+# Ein funksjon som reknar ut potensiell energi - eksempel på å ha valfrie parameter
+def potensiellEnergi(m, h, g=9.81):
+    print(f"En gjenstand med massen {m} kg ved høyden {h} m har den potensielle energien {m*g*h:.2f} J (med g = {g})." )
+
+potensiellEnergi(50, 10)
+potensiellEnergi(50, 10, g=1.62)
+potensiellEnergi(50, 10, 1.62)
+
+# Definerer ein funksjon som tel antall ord i ein tekst
+def antallOrd(tekst):
+    # Returnerer lengda til lista med ord i teksten
+    return len(tekst.split())
+
+tekst = "Hei på deg!"
+
+print(f"Antalet ord i '{tekst}' er {antallOrd(tekst)}")
+
+# Definerer ein funksjon som tar inn en liste som parameter og returnerer en liste med de doblede verdiene
+def dobleListe(liste):
+    # Oppretter en tom liste som skal inneholde de doblede verdiene
+    doblet = []
+    # Går gjennom hvert element i den opprinnelige listen
+    for tall in liste:
+        # Dobler elementet og legger det til den nye listen
+        doblet.append(tall * 2)
+    # Returnerer den nye listen
+    return doblet
+
+# Lager en liste med noen tall
+minListe = [1, 2, 3, 4, 5]
+# Kaller på funksjonen med listen som parameter
+minDobledeListe = dobleListe(minListe)
+# Skriver ut den opprinnelige og den doblede listen
+print("Opprinnelig liste:", minListe)
+print("Doblet liste:", minDobledeListe)
+
+# Eksempel på ein rekuriv funksjon
+def rekursiv_sum(n):
+    if n <= 1:
+        return n
+    else:
+        return n + rekursiv_sum(n-1)
+
+print(rekursiv_sum(10))
+
+# Eksempel på korleis me kan be om forklaring/hjelp til ein funksjon
+help(random.randint) # NB: Me har importert random-biblioteket heilt øvst i koden
+
+# Eksempel på korleis me kan skrive ein funksjon som me dokumenterer
+def terning(antallSider: int) -> int:
+    """Returnerer et tilfeldig heltall i intervallet [1, antallSider], med begge endepunktente inkludert."""
+    return random.randint(1, antallSider)
+
+print(terning(6))
+help(terning)
