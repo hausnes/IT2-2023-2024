@@ -73,7 +73,8 @@ movie_runtimes = {
     "The Clock": 1440 
 }
 
-#print(korrigere_data(movie_runtimes))
+print("Korrigert data:")
+print(korrigere_data(movie_runtimes))
 
 # Leik med imdb
 # get a movie
