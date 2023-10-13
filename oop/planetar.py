@@ -4,6 +4,12 @@ class Planet:
         self.solavstand = solavstand
         self.radius = radius
 
+    def areal(self):
+        return 4 * 3.14 * self.radius ** 2
+    
+    def formatertUtskrift(self):
+        return f"Planet {self.navn} har solavstand {self.solavstand}, radius {self.radius} og areal {self.areal()}"
+
 mars = Planet("Mars", 227.9, 3389.5)
 jupiter = Planet("Jupiter", 778.5, 69911)
 
@@ -14,3 +20,7 @@ print(jupiter.radius)
 
 # Kan printe ut kva datatype det er
 print(type(mars))
+
+
+for planet in [mars, jupiter, uranus]:
+    print(planet.formatertUtskrift())
