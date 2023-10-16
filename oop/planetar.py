@@ -1,26 +1,44 @@
 class Planet:
-    def __init__(self, navn, solavstand, radius):
+    def __init__(self, navn, solavstand, radius, antallRinger = 0):
         self.navn = navn
         self.solavstand = solavstand
         self.radius = radius
+        self.antallRinger = antallRinger
+        self.maaner = [] # Liste som skal holde på måner
 
     def areal(self):
         return 4 * 3.14 * self.radius ** 2
     
-    def formatertUtskrift(self):
-        return f"Planet {self.navn} har solavstand {self.solavstand}, radius {self.radius} og areal {self.areal()}"
+    def visInfo(self):
+        print(f"Planeten {self.navn} har {self.antallRinger} ringer, er {self.solavstand} millioner km unna sola og har radius {self.radius} km.")
+        print(f"Arealet til {self.navn} er {self.areal():.2f} kvadratkilometer.")
 
-mars = Planet("Mars", 227.9, 3389.5)
-jupiter = Planet("Jupiter", 778.5, 69911)
+    def leggTilMaane(self, maane):
+        self.maaner.append(maane)
 
-uranus = Planet("Uranus", 150, 10000000000)
+# Lager en ordbok som holder på Planet-objekter
+planeter = {}
 
-jupiter.radius = 20000 # Endre radiusen til Jupiter
-print(jupiter.radius)
+# Lager og legger til noen Planet-objekter
+planeter["Mars"] = Planet("Mars", 227.9, 3389.5)
+planeter["Jupiter"] = Planet("Jupiter", 778.5, 20000, 4)
+planeter["Saturn"] = Planet("Saturn", 1434000, 58232, 7)
+
+# Endre radiusen til Jupiter
+planeter["Jupiter"].radius = 69911 
+print(f"Ny radius til Jupiter er {planeter['Jupiter'].radius}")
 
 # Kan printe ut kva datatype det er
-print(type(mars))
+print(type(planeter["Mars"]))
 
+# Kan printe ut informasjon om planetene
+for p in planeter.values():
+    print(p.visInfo())
 
-for planet in [mars, jupiter, uranus]:
-    print(planet.formatertUtskrift())
+# Kan legge til måner (men merk at dette bør gjerast vha. ein eigen klasse for måner etterkvart)
+planeter["Jupiter"].leggTilMaane("Io")
+planeter["Jupiter"].leggTilMaane("Europa")
+planeter["Jupiter"].leggTilMaane("Ganymedes")
+
+# Kan printe ut månene til Jupiter
+print(f"Månene til Jupiter er {planeter['Jupiter'].maaner}")
