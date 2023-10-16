@@ -1,3 +1,5 @@
+# Kjelde: https://www.youtube.com/watch?v=ByIdnfMFG3E
+
 import pyautogui
 import time
 import keyboard
