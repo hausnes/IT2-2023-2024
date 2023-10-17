@@ -1,5 +1,7 @@
 class Planet:
+    """Klasse for å representere en planet"""
     def __init__(self, navn, solavstand, radius, antallRinger = 0):
+        """Konstruktør"""
         self.navn = navn
         self.solavstand = solavstand
         self.radius = radius
@@ -7,13 +9,16 @@ class Planet:
         self.maaner = [] # Liste som skal holde på måner
 
     def areal(self):
+        """Metode for å beregne areal"""
         return 4 * 3.14 * self.radius ** 2
     
     def visInfo(self):
+        """Metode for å skrive ut informasjon om en planet"""
         print(f"Planeten {self.navn} har {self.antallRinger} ringer, er {self.solavstand} millioner km unna sola og har radius {self.radius} km.")
         print(f"Arealet til {self.navn} er {self.areal():.2f} kvadratkilometer.")
 
     def leggTilMaane(self, maane):
+        """Metode for å legge til en måne"""
         self.maaner.append(maane)
 
 # Lager en ordbok som holder på Planet-objekter
