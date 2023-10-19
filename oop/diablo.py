@@ -58,6 +58,7 @@ print(f"All informasjon om helten: {hero}") # Skriv ut informasjon om helten, ka
 # Lagar bossen
 boss = Character("Lars den Rektorianske", 1, 100, 100)
 print(f"All informasjon om bossen: {boss}") # Skriv ut informasjon om bossen, kallar __str__-metoden
+print()
 
 # Gjer gjerne meir ut av delen over, der du kan sette meir avanserte verdier for helten og bossen
 # Kanskje du til og med kan la spelaren setje verdiane sjølv for helten (tenk "character creation")?
