@@ -90,7 +90,7 @@ while hero.is_alive() and boss.is_alive():
     
     print()
 
-# Skriv ut resultatet av kampen (sidan me er ferdige med while-løkka , dvs ein av dei er døde)
+# Skriv ut resultatet av kampen (sidan me er ferdige med while-løkka, dvs ein av dei er døde)
 print()
 print("Kampen er over!")
 print(f"Etter kampen så har helten {hero.get_hp()} HP og bossen {boss.get_hp()} HP.")
