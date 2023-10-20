@@ -47,3 +47,6 @@ planeter["Jupiter"].leggTilMaane("Ganymedes")
 
 # Kan printe ut månene til Jupiter
 print(f"Månene til Jupiter er {planeter['Jupiter'].maaner}")
+
+liste = [1,2,3]
+print(liste[0])

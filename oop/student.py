@@ -5,9 +5,8 @@ class Student:
         self.name = name
         self.birthdate = birthdate
         self.grade = grade
-        # self.age = datetime.now().year - self.birthdate.year
-        self.age = self.get_age()
-
+        self.age = datetime.now().year - self.birthdate.year
+        
     def __str__(self):
         return f"Name: {self.name}, Birthdate: {self.birthdate}, Grade: {self.grade}"
     
