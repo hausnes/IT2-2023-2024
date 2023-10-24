@@ -52,6 +52,43 @@ class Character:
         if self.mana < 0:
             self.mana = 0
 
+class Grafikk:
+    def __init__(self):
+        pass
+
+    def tegn_sverd(self):
+        # Tegn en illustrasjon av et sverd vha. ASCII-art
+        return f"    /| \n" \
+                f"0|===|* >---------------> \n" \
+                f"    \| \n"
+
+    def tegn_healing(self):
+        return f"    /|\ \n" \
+               f"   / | \ \n" \
+               f"  /  |  \ \n" \
+               f"  \  |  / \n" \
+               f"   \ | / \n" \
+               f"    \|/ \n"
+    
+    def tegn_startskjem(self):
+        return f"    ___   ___  ____              _     _  \n" \
+               f"   / _ \ / _ \|  _ \        __ _| |__ | | ___ \n" \
+               f"   | | | | | || |_)|_____  / _` | '_ \| |/ _ \  \n" \
+               f"   | |_| | |_||  __/______| (_| | |_) | | (_)| \n" \
+               f"   \___/ \___/|_|          \__,_|_.__/|_|\___/ \n"
+    
+    def tegn_sluttskjerm(self):
+        return  f"  ____\n" \
+                f" / ___| __ _ _ __ ___   ___    _____   _____ _ __ \n" \
+                f"| |  _ / _` | '_ ` _ \ / _ \  / _ \ \ / / _ \ '__| \n" \
+                f"| |_| | (_| | | | | | |  __/ | (_) \ V /  __/ | \n" \
+                f" \____|\__,_|_| |_| |_|\___|  \___/ \_/ \___|_| \n"
+
+# Lagar grafikkobjektet
+grafikk = Grafikk()
+# Skriv ut startskjermen
+print(grafikk.tegn_startskjem())
+
 # Lagar helten
 hero = Character("Jo Bjørnar den objektorienterte", 1, 100, 100)
 print(f"All informasjon om helten: {hero}") # Skriv ut informasjon om helten, kallar __str__-metoden
@@ -69,10 +106,14 @@ while hero.is_alive() and boss.is_alive():
     angrip = input("Vil du angripe? (ja/nei) ")
     if angrip == "ja":
         print("Du angriper!")
+        print()
+        print(grafikk.tegn_sverd())
         boss.hit(20) # Gjer gjerne denne delen random (tilfeldig skade)
         print(f"Bossen har {boss.get_hp()} HP igjen.")
     elif angrip == "nei":
         print("Du angriper ikkje, og healer derfor!")
+        print()
+        print(grafikk.tegn_healing())
         hero.heal(10) # Gjer gjerne denne delen random (tilfeldig heal)
     else:
         print("Du må skrive ja eller nei!")
@@ -93,5 +134,6 @@ while hero.is_alive() and boss.is_alive():
 
 # Skriv ut resultatet av kampen (sidan me er ferdige med while-løkka, dvs ein av dei er døde)
 print()
+print(grafikk.tegn_sluttskjerm())
 print("Kampen er over!")
 print(f"Etter kampen så har helten {hero.get_hp()} HP og bossen {boss.get_hp()} HP.")
