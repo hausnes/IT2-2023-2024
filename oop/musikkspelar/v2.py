@@ -29,7 +29,7 @@ class Player:
         """Plays the current song."""
         pygame.mixer.music.play()
 
-    def pause(self):
+    def pause(self): # NB: Motsetningen er pygame.mixer.music.unpause(), som ikkje er implementert i denne versjonen av programmet
         """Pauses the current song."""
         pygame.mixer.music.pause()
 
