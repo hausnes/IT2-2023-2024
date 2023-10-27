@@ -44,6 +44,16 @@ class Player:
     def get_current_song(self):
         """Returns the current song that is being played, or None if no song is playing."""
         return self.current_song
+    
+    def show_menu(self):
+        '''Shows the menu.'''
+        print("\nFunksjonar:")
+        print("1: Vel lydfil")
+        print("2: Spele lydfil")
+        print("3: Pause lydfil")
+        print("4: Stopp lydfil")
+        print("5: Avslutt")
+        print()
 
 song1 = Song("Horror hit", "lyd/horror-hit-logo-142395.mp3")
 song2 = Song("Sunflower Street Drumloop", "lyd/sunflower-street-drumloop-85bpm-163900.mp3")
@@ -53,16 +63,6 @@ song4 = Song("Trap Future Bass", "lyd/trap-future-bass-royalty-free-music-167020
 # Oppretter musikkspelarobjektet
 player = Player()
 
-# Gjer brukaren kjent med funksjonane
-def meny():
-    print("\nFunksjonar:")
-    print("1: Vel lydfil")
-    print("2: Spele lydfil")
-    print("3: Pause lydfil")
-    print("4: Stopp lydfil")
-    print("5: Avslutt")
-    print()
-
 # Ønsker brukeren velkomen
 print("-----------------------------")
 print("Velkomen til musikkspelaren!")
@@ -71,7 +71,7 @@ print("-----------------------------")
 val = 0
 
 while val != 5:
-    meny()
+    player.show_menu()
     print("Gjeldande lydfil:", player.get_current_song().get_title() if player.get_current_song() else "Ingen lydfil valt.")
     val = int(input("\nKva vil du gjere? "))
     match val:
@@ -96,14 +96,3 @@ while val != 5:
         case _:
             print("\nUgyldig val.")
             pass
-
-# player.load_song(song1)
-# player.play()
-
-# # Wait for the song to finish playing
-# while player.is_playing():
-#     time.sleep(0.1)
-
-# # Play the next song
-# player.load_song(song2)
-# player.play()
