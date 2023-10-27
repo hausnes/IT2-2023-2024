@@ -16,9 +16,10 @@ class Song:
 class Player:
     """A class to control the playback of songs."""
 
-    def __init__(self):
+    def __init__(self, paused=False):
         pygame.mixer.init()
         self.current_song = None
+        self.paused = False
 
     def load_song(self, song):
         """Loads a song into the player."""
@@ -29,9 +30,14 @@ class Player:
         """Plays the current song."""
         pygame.mixer.music.play()
 
-    def pause(self): # NB: Motsetningen er pygame.mixer.music.unpause(), som ikkje er implementert i denne versjonen av programmet
-        """Pauses the current song."""
-        pygame.mixer.music.pause()
+    def pause(self):
+        """Pauses or unpauses the current song."""
+        if self.paused:
+            self.paused = False
+            pygame.mixer.music.unpause()
+        else:
+            self.paused = True
+            pygame.mixer.music.pause()
 
     def stop(self):
         """Stops the current song."""
