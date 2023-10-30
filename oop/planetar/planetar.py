@@ -41,7 +41,6 @@ class Planet:
                 # beregne forholdet mellom hver månes volum og planetens volum. Dette forholdstallet skal skrives ut sammen med månenes navn. Hvis planeten ikke har noen måner, skal en passende beskjed skrives ut.
                 print(f"Forholdet mellom volumet til {m.navn} og {self.navn} er {m.volum() / self.volum():.2f}")
 
-
 class Maane:
     '''Klasse for å representere en måne'''
     def __init__(self, navn, radius = 0):
