@@ -12,7 +12,11 @@ class Planet:
         """Metode for å beregne areal"""
         return 4 * 3.14 * self.radius ** 2
     
-    def visInfo(self):
+    def __str__(self):
+        """Metode for å skrive ut informasjon om en planet"""
+        return f"Planeten {self.navn} har {self.antallRinger} ringer, er {self.solavstand} millioner km unna sola og har radius {self.radius} km. Arealet til {self.navn} er {self.areal():.2f} kvadratkilometer."
+
+    def visInfo(self): # NB: Bruk heller __str__ -metoden
         """Metode for å skrive ut informasjon om en planet"""
         print(f"Planeten {self.navn} har {self.antallRinger} ringer, er {self.solavstand} millioner km unna sola og har radius {self.radius} km.")
         print(f"Arealet til {self.navn} er {self.areal():.2f} kvadratkilometer.")
@@ -38,7 +42,8 @@ print(type(planeter["Mars"]))
 
 # Kan printe ut informasjon om planetene
 for p in planeter.values():
-    print(p.visInfo())
+    # print(p.visInfo())
+    print(p) # NB: Denne bruker automatisk __str__ -metoden
 
 # Kan legge til måner (men merk at dette bør gjerast vha. ein eigen klasse for måner etterkvart)
 planeter["Jupiter"].leggTilMaane("Io")
@@ -47,6 +52,3 @@ planeter["Jupiter"].leggTilMaane("Ganymedes")
 
 # Kan printe ut månene til Jupiter
 print(f"Månene til Jupiter er {planeter['Jupiter'].maaner}")
-
-liste = [1,2,3]
-print(liste[0])
