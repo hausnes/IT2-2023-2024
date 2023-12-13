@@ -6,7 +6,27 @@ class PixelArtApp:
         self.screen_height = screen_height
         self.pixel_size = pixel_size
         self.screen = pygame.display.set_mode((screen_width, screen_height))
-        self.pixels = [["white" for _ in range(screen_width // pixel_size)] for _ in range(screen_height // pixel_size)]
+        
+        # self.pixels = [["white" for _ in range(screen_width // pixel_size)] for _ in range(screen_height // pixel_size)]
+        # Alternative way to create the pixels list (more readable)
+        self.pixels = []
+        # Calculate the number of pixels in width and height
+        num_pixels_width = self.screen_width // self.pixel_size
+        num_pixels_height = self.screen_height // self.pixel_size
+
+        # Loop over the height of the screen
+        for _ in range(num_pixels_height):
+            # Initialize an empty row
+            row = []
+            
+            # Loop over the width of the screen
+            for _ in range(num_pixels_width):
+                # Add a "white" pixel to the row
+                row.append("white")
+    
+            # Add the row to the pixels
+            self.pixels.append(row)
+
         self.drawing_color = "black"
         self.mouse_button_down = False
         self.help_shown = False
