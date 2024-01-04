@@ -1,6 +1,7 @@
 import sounddevice as sd
 import numpy as np
 import pygame
+from time import sleep
 # import keyboard
 
 # Initialize Pygame
@@ -18,6 +19,7 @@ def audio_callback(indata, frames, time, status):
     print("Volume:", volume_norm)
     if volume_norm > 100 and not pygame.mixer.music.get_busy():
         pygame.mixer.music.play()
+        sleep(2) # Sleep for 2 seconds to prevent the alarm from repeating too quickly
 
 # def quit_program():  # new function
 #     pygame.mixer.music.stop()
