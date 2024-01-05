@@ -70,6 +70,7 @@ class PixelArtApp:
 
     def run(self):
         running = True
+        prev_pos = None
         while running:
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
@@ -78,12 +79,19 @@ class PixelArtApp:
                     x, y = event.pos
                     self.pixels[y // self.pixel_size][x // self.pixel_size] = self.drawing_color
                     self.mouse_button_down = True
+                    prev_pos = (x, y)
                 elif event.type == pygame.MOUSEBUTTONUP:
                     self.mouse_button_down = False
+                    prev_pos = None
                 elif event.type == pygame.MOUSEMOTION:
                     if self.mouse_button_down:
                         x, y = event.pos
-                        self.pixels[y // self.pixel_size][x // self.pixel_size] = self.drawing_color
+                        if prev_pos is not None:
+                            px, py = prev_pos
+                            pygame.draw.line(self.screen, self.drawing_color, (px, py), (x, y), self.pixel_size) 
+                            self.pixels[y // self.pixel_size][x // self.pixel_size] = self.drawing_color
+                           # pygame.draw.line(self.screen, pygame.Color(self.drawing_color), prev_pos, (x, y), self.pixel_size)
+                            prev_pos = (x, y)
                 elif event.type == pygame.KEYDOWN:
                     if event.key == pygame.K_h:
                         self.help_shown = not self.help_shown
