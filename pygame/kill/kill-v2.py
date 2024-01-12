@@ -63,9 +63,12 @@ def main():
         player_ball.draw()
 
         if pygame.sprite.spritecollide(player_ball, bouncing_balls, True): # True means that the bouncing ball will be removed from the group if there is a collision (i.e. "kill")
-            print("Game Over!")
-            # pygame.quit()
-            # sys.exit()
+            print("Collision!")
+
+            if len(bouncing_balls) == 0:  # Check if there are no more bouncing balls
+                print("Game Over!")
+                pygame.quit()
+                sys.exit()
 
         pygame.display.flip()
         clock.tick(60)
