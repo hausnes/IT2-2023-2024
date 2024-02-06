@@ -12,7 +12,7 @@ y3 = [10, 10, 10, 10, 10]
 
 # Lager grafen
 plt.plot(xverdier, yverdier, label="Stigande")  # Lager første linje
-plt.plot(xverdier, y2, label="Synkande")              # Lager andre linje
-plt.scatter(xverdier, y3, label="Konstant")              # Lager tredje linje
+plt.plot(xverdier, y2, label="Synkande")        # Lager andre linje
+plt.scatter(xverdier, y3, label="Konstant")     # Lager tredje linje
 plt.legend()                                    # Viser labels
 plt.show()                                      # Viser grafene
