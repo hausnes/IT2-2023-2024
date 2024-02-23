@@ -1,8 +1,10 @@
 import json
 import matplotlib.pyplot as plt
 
+filename = 'youtube.json'
+
 # Finner encodingen til filen
-with open(filepath,'r') as f:
+with open(filename,'r') as f:
     filestr = str(f)
     index = filestr.find("encoding=")
     enc = filestr[index+9:].replace('\'', '')
@@ -10,7 +12,7 @@ with open(filepath,'r') as f:
     f.close
 
 # Last inn JSON-fila
-with open('youtube.json', 'r', encoding=enc) as f:
+with open(filename, 'r', encoding=enc) as f:
     data = json.load(f)
 
 # Rens data for eventuelle problematiske verdiar
