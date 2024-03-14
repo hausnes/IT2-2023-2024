@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 
 filename = 'youtube.json'
 
-# Finner encoding til filen
+# Finner encoding til filen (skrive av Birk)
 with open(filename,'r') as f:
     filestr = str(f)
     index = filestr.find("encoding=")
