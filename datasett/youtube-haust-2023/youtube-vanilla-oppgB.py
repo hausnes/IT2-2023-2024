@@ -10,7 +10,9 @@ with open(filename,'r') as f:
     enc = filestr[index+9:].replace('\'', '')
     enc = enc.replace('>', '')
     f.close
-
+    print("Encoding:")
+    print(enc)
+    
 # Last inn JSON-filen
 with open(filename, 'r', encoding=enc) as f:
     data = json.load(f)
