@@ -1,1 +1,4 @@
 .env
+cache
+*pyc
+testing/my_sum/__pycache__/__init__.cpython-312.pyc
