@@ -8,7 +8,7 @@ import csv
 
 with open('dev_bruk.csv', 'r') as file:
     reader = csv.DictReader(file)
-    counts = {}
+    counts = {} # Klargjer ei tom ordbok (dictionary)
     #counts = Counter()
 
     for row in reader:
