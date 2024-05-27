@@ -1,0 +1,1 @@
+[{"class": "Collectible", "attributes": {"price": 100, "purchase_date": "2024-05-27T11:09:34.110692", "current_value": 200, "category": "Book", "franchise": "Harry Potter"}}, {"class": "Movie", "attributes": {"price": 200, "purchase_date": "2024-05-27T11:09:34.110692", "current_value": 400, "category": "Movie", "franchise": "Harry Potter", "runtime": 120, "release_year": 2001}}]
