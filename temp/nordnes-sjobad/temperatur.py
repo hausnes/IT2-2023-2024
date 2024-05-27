@@ -12,6 +12,10 @@ class TemperatureFetcher:
         content = response.content.decode('utf-8')
         tree = html.fromstring(content)
         temperature = tree.xpath('/html/body/main/ul/li[6]/div/span[2]/text()')
+        temperature = temperature[0].replace('°C', '')
+        temperature = temperature.replace(',', '.')
+        #print(temperature)
+        #print(type(temperature))
         return temperature
 
     def save_to_csv(self, temperature):
