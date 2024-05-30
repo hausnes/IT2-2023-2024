@@ -1,5 +1,13 @@
 import json
 import pandas as pd
+import re
+
+def identifiser_subkategori(data):
+    for item in data:
+        if '�' in item['alle aktiviteter']:
+            # print("Fant spesialteikn..")
+            # item['underkategori'] = item['alle aktiviteter'].replace('�', '').strip()
+            re.sub(r'\W+', ' ', item['alle aktiviteter'])
 
 def tolkePandas(data):
     # for linje in data: # For testing
@@ -31,7 +39,7 @@ def tolke(data):
 
     # Skriv ut oppsummeringen
     for (activity, gender), time_spent in summary.items():
-        print(f"Activity: {activity}, Gender: {gender}, Time spent: {time_spent}")
+        print(f"Aktivitet: {activity}, Kjønn: {gender}, Tid brukt: {time_spent}")
 
 # Leser data inn
 def read_json_file(file_path, enc):
@@ -39,13 +47,14 @@ def read_json_file(file_path, enc):
         next(file) # Hoppar over linje 1
         data = json.load(file)
         print(f"Encoding: {enc}")  # For å sjå kva encoding som blei nytta
+        identifiser_subkategori(data)
         #print(data)
         tolke(data)
 
 try:
-    read_json_file('data.json', 'utf-8')
+    read_json_file('05994_20240126-145813-json.json', 'utf-8')
 except UnicodeDecodeError:
     try:
-        read_json_file('data.json', 'ISO-8859-1')
+        read_json_file('05994_20240126-145813-json.json', 'ISO-8859-1')
     except UnicodeDecodeError:
-        read_json_file('data.json', 'cp1252')
+        read_json_file('05994_20240126-145813-json', 'cp1252')
