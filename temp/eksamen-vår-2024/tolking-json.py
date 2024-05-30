@@ -2,12 +2,12 @@ import json
 import pandas as pd
 import re
 
-def identifiser_subkategori(data):
-    for item in data:
-        if '�' in item['alle aktiviteter']:
-            # print("Fant spesialteikn..")
-            # item['underkategori'] = item['alle aktiviteter'].replace('�', '').strip()
-            re.sub(r'\W+', ' ', item['alle aktiviteter'])
+# def identifiser_subkategori(data):
+#     for item in data:
+#         if '�' in item['alle aktiviteter']:
+#             # print("Fant spesialteikn..")
+#             # item['underkategori'] = item['alle aktiviteter'].replace('�', '').strip()
+#             re.sub(r'\W+', ' ', item['alle aktiviteter'])
 
 def tolkePandas(data):
     # for linje in data: # For testing
@@ -47,7 +47,7 @@ def read_json_file(file_path, enc):
         next(file) # Hoppar over linje 1
         data = json.load(file)
         print(f"Encoding: {enc}")  # For å sjå kva encoding som blei nytta
-        identifiser_subkategori(data)
+        #identifiser_subkategori(data)
         #print(data)
         tolke(data)
 
