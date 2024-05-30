@@ -3,7 +3,7 @@ import csv
 def read_csv_file(file_path, enc):
     with open(file_path, 'r', encoding=enc) as file:
         reader = csv.reader(file, delimiter=';')
-        print(f"Endte opp med encoding: {enc}")
+        print(f"Endte opp med encoding: {enc}") # For å sjå kva encoding som blei nytta for å få det til å fungere
         for row in reader:
             print(row)
 
