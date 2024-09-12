@@ -49,6 +49,7 @@ equal = list1 == list2
 print("\nListe 1:",list1)
 print("Liste 2:",list2)
 print("Listene er like:",equal)
+# NB: Kan du gjøre dette vha en løkke?
 
 # Fjern duplikater fra en liste
 unique_numbers = set(numbers)
@@ -72,7 +73,7 @@ print("\nSortert liste:",sorted_numbers)
 verdensdeler = ["Afrika", "Antarktis", "Asia", "Europa", "Nord-Amerika", "Oseania", "Sør-Amerika"]
 print("\nVerdensdelar:",verdensdeler)
 print("Første verdensdel:",verdensdeler[0])
-print("Midterste verdensdel:",verdensdeler[3])
+print("Midterste verdensdel:",verdensdeler[3]) # NB: Kan du gjøre dette dynamisk?
 print("Siste verdensdel:",verdensdeler[-1])
 
 # Lag en liste med heltallene fra og med 1 til og med 50. Skriv ut lista for å sjekke at du har fått med de riktige tallene.
@@ -118,7 +119,8 @@ for i in kvadrattall:
 
 print("Summen av alle verdiane i lista med kvadrattall (sjekk):",summen)
 
-# Finn ut om den innebygde funksjonen sum() gjorde jobben raskare enn den me skreiv sjølv! Du kan til dømes bruke modulen time, eller timeit.
+# Finn ut om den innebygde funksjonen sum() gjorde jobben raskare enn den me skreiv sjølv! Du kan til dømes bruke modulen timeit.
+# Gjer det same for min() og max().
 
 # Oppgaver, del 3
 # Lag et program som bruker en løkke for å fjerne alle forekomster av tallet 3 fra denne lista: 
@@ -128,6 +130,15 @@ while 3 in liste:
     liste.remove(3)
 
 print("\nListe etter at alle forekomstane av tallet 3 er fjerna:",liste)
+
+# Alternativ løysing:
+liste = [1, 6, 3, 4, 2, 3, 5, 7, 8, 3, 3, 3, 2, 3, 4, 6, 7, 3, 4, 3, 3]
+nyListe = []
+for i in liste:
+    if i != 3:
+        nyListe.append(i)
+
+print("Alternativ løysing:",nyListe)
 
 # Liste med eksempeltekst
 liste = ["Asterix","Obelix","Idefix"]
