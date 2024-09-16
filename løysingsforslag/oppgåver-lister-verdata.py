@@ -1,3 +1,7 @@
+'''
+Oppgåve: Verdata, enkle lister
+'''
+
 listeDagar = ["Måndag","Tysdag","Onsdag","Torsdag","Fredag","Laurdag","Søndag"]
 listeVerOgVind = [] # Skal innehalde ei oversikt over dagar og tilhøyrande verobservasjonar
 
