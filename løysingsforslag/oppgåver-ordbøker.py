@@ -1,5 +1,5 @@
 '''
-Oppgåve 1 (oppgåver frå lærebok, Aschehoug, kapittel om ordbøker - heilt til slutt)
+Oppgåve 2 (oppgåver frå lærebok, Aschehoug, kapittel om ordbøker - heilt til slutt)
 
 '''
 
@@ -31,7 +31,7 @@ else:
     print(f"Ugyldig tall. Prøv igjen.")
 
 '''
-Oppgåve 2
+Oppgåve 4
 
 '''
 
@@ -68,7 +68,7 @@ for by, info in norske_byer.items():
     print()
 
 '''
-Oppgåve 3
+Oppgåve 5
 
 '''
 
